@@ -167,7 +167,7 @@ wss.on("connection", (ws) => {
       return;
     }
 
-    if(msg.type === "roll" || msg.type === "move" || msg.type === "place_barricade" || msg.type==="reset"){
+    if(msg.type === "roll" || msg.type === "move" || msg.type === "place_barricade" || msg.type==="reset" || msg.type==="start"){
       broadcast(room, { type:"event", from:self.clientId, event: msg });
       return;
     }
